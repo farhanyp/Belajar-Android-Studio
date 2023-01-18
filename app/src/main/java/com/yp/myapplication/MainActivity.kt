@@ -18,8 +18,13 @@ class MainActivity : AppCompatActivity() {
         val sayHelloButton: Button = findViewById(R.id.sayHelloButton)
         val sayHelloTextView: TextView = findViewById(R.id.sayHelloTextView)
 
-
-
+//        Menggunakan click listener pada button
+        sayHelloButton.setOnClickListener{
+//            Mengubah inputan text menjadi string
+            val name = nameEditText.text.toString()
+//            Menampilkan text ke text view
+            sayHelloTextView.text = name
+        }
 
     }
 }
