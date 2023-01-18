@@ -2,4 +2,10 @@
     <string name="app_name">Belajar Android Dasar</string>
     <string name="nameEditText">Name:</string>
     <string name="sayHelloButton">SayHello</string>
+    <string name="sayHelloTextView">%1$s</string>
+    <string-array name="names">
+        <item>Farhan</item>
+        <item>Yudha</item>
+        <item>Pratama</item>
+    </string-array>
 </resources>

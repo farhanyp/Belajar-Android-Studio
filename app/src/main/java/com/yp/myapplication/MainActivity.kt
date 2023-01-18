@@ -40,7 +40,16 @@ class MainActivity : AppCompatActivity() {
 //            Mengubah inputan text menjadi string
             val name = nameEditText.text.toString()
 //            Menampilkan text ke text view
-            sayHelloTextView.text = name
+//            sayHelloTextView.text = name
+
+//            Menampilkan text ke text view menggunakan resource string
+            sayHelloTextView.text = resources.getString(R.string.sayHelloTextView, name)
+//            Memanggil Resource String berbentuk Array
+//            resources.getStringArray(R.array.names).forEach {
+//                Log.i("YP", it)
+//            }
+
+
         }
 
     }
