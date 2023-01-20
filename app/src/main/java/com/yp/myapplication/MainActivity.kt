@@ -2,6 +2,7 @@ package com.yp.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -44,11 +45,20 @@ class MainActivity : AppCompatActivity() {
 
 //            Menampilkan text ke text view menggunakan resource string
             sayHelloTextView.text = resources.getString(R.string.sayHelloTextView, name)
+
 //            Memanggil Resource String berbentuk Array
 //            resources.getStringArray(R.array.names).forEach {
 //                Log.i("YP", it)
 //            }
 
+//            Menciba memakai resource value lainnya
+            Log.i("ValueResource", resources.getBoolean(R.bool.isTrue).toString())
+            Log.i("ValueResource", resources.getInteger(R.integer.maxPage).toString())
+            Log.i("ValueResource", resources.getIntArray(R.array.numbers).joinToString(", "))
+            Log.i("ValueResource", resources.getColor(R.color.background).toString())
+
+//            Mencoba mengganti warna button
+            sayHelloButton.setBackgroundColor(resources.getColor((R.color.background)))
 
         }
 
