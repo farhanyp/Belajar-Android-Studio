@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
             Log.i("ValueResource", resources.getColor(R.color.background).toString())
 
 //            Mencoba mengganti warna button
-            sayHelloButton.setBackgroundColor(resources.getColor((R.color.background)))
+//            sayHelloButton.setBackgroundColor(resources.getColor((R.color.background)))
 
         }
 
