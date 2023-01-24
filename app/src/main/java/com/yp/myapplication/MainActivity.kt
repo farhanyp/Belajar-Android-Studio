@@ -51,14 +51,23 @@ class MainActivity : AppCompatActivity() {
 //                Log.i("YP", it)
 //            }
 
-//            Menciba memakai resource value lainnya
-            Log.i("ValueResource", resources.getBoolean(R.bool.isTrue).toString())
-            Log.i("ValueResource", resources.getInteger(R.integer.maxPage).toString())
-            Log.i("ValueResource", resources.getIntArray(R.array.numbers).joinToString(", "))
-            Log.i("ValueResource", resources.getColor(R.color.background).toString())
+//            Mencoba memakai resource value lainnya
+//            Log.i("ValueResource", resources.getBoolean(R.bool.isTrue).toString())
+//            Log.i("ValueResource", resources.getInteger(R.integer.maxPage).toString())
+//            Log.i("ValueResource", resources.getIntArray(R.array.numbers).joinToString(", "))
+//            Log.i("ValueResource", resources.getColor(R.color.background).toString())
 
 //            Mencoba mengganti warna button
 //            sayHelloButton.setBackgroundColor(resources.getColor((R.color.background)))
+
+//            Menggunakan Assets Manager yaitu salah satunya ialah Json
+//            val json = assets.open("sample.json").bufferedReader().use { it.readText() }
+//
+//            Log.i("Assets", json)
+
+
+
+
 
         }
 
