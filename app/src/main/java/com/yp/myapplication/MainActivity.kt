@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
 //    Cek apakah android mempunyai fitur fingerprint
     private fun checkFeature(){
-        if(packageManager.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)){
+        if(packageManager.hasSystemFeature(PackageManager.FEATURE_SCREEN_LANDSCAPE)){
             Log.i("FEATURE", "Fitur Fingerprints ON")
         }else{
             Log.i("FEATURE", "Fitur Fingerprints OFF")
