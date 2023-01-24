@@ -1,5 +1,7 @@
 package com.yp.myapplication
 
+import android.content.pm.PackageManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -21,6 +23,25 @@ class MainActivity : AppCompatActivity() {
         sayHelloTextView= findViewById(R.id.sayHelloTextView)
     }
 
+//    Cek apakah android mempunyai fitur fingerprint
+    private fun checkFeature(){
+        if(packageManager.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)){
+            Log.i("FEATURE", "Fitur Fingerprints ON")
+        }else{
+            Log.i("FEATURE", "Fitur Fingerprints OFF")
+        }
+    }
+
+//    Cek apakah andorid memiliki SDK yang cukup
+    private fun checkSDK(){
+        Log.i("SDK", Build.VERSION.SDK_INT.toString())
+
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S){
+            Log.i("FEATURE", "SDK Tidak cukup")
+        }else{
+            Log.i("FEATURE", "SDK cukup")
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +52,9 @@ class MainActivity : AppCompatActivity() {
 //        Memanggil Function initComponents
         initComponents()
 
+        checkFeature()
+        checkSDK()
+
 //        Menangkap id komponen
 //        val nameEditText: EditText = findViewById(R.id.nameEditText)
 //        val sayHelloButton: Button = findViewById(R.id.sayHelloButton)
@@ -38,6 +62,7 @@ class MainActivity : AppCompatActivity() {
 
 //        Menggunakan click listener pada button
         sayHelloButton.setOnClickListener{
+
 //            Mengubah inputan text menjadi string
             val name = nameEditText.text.toString()
 //            Menampilkan text ke text view

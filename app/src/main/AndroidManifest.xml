@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+<!--    Mengecek apakah android mempunyai fitur finger? jika tidak maka aplikasi tidak bisa di instal karena mewajibkan untuk mempunyai fitur figerprint-->
+    <uses-feature android:name="android.hardware.fingerprint" android:required="true"/>
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
